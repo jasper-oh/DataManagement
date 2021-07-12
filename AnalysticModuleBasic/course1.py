@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pylab as plt
-% matplotlib inline
+# % matplotlib inline
 # DataFrame
 # List 로 DataFrame 만들기
 
@@ -14,7 +14,7 @@ df = pd.DataFrame([
 #  열 기준으로 추출하기
 
 df.loc[:, 0]
-np.means(df.loc[:, 0])
+np.mean(df.loc[:, 0])
 
 #  행 기준으로 추출하기
 
@@ -61,8 +61,9 @@ names.tail()
 names.count()
 
 # pivot을 이용하여 각 이름의 count 를 연도별 합계로 그룹화 하여 집계하기
+
 total_births = names.pivot_table(
-    'births', index='year', colums='gender', aggfunc=sum)
+    'births', index='year', columns='gender', aggfunc=sum)
 total_births.head(10)
 
 # matplotlib 을 이용하여 그래프 생성하기
