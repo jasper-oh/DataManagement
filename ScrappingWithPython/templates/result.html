@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results</title>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/styles_1.css')}}"/ >
+</head>
+<body>
+  <div class="main-box">
+    <h1>Work Where?</h2>
+    <h3>{{result_value}} RESULTS FOR {{lang_name}} ! horray!</h4>
+    <div class="buttons">
+      <div class="back-button">
+        <a href="/">Go back home</a>
+      </div>  
+      <div class="export-button">
+        <a href="/download?keyword={{lang_name}}">export this page</a>
+      </div>
+      
+    </div>
+    <section>
+      {% for job in jobs %}
+      <div class="job-contain-box">
+        <h4>{{job['name']}}</h3>
+        <h4>{{job['company']}}</h4>
+        <a href="{{job['url']}}" target="_blank">Apply from {{job['website']}}</a>
+      </div>
+      {% endfor %}
+    </section>
+  </div>  
+</body>
+</html>
