@@ -8,6 +8,8 @@
 4. Jupytor NoteBook in VSCODE
 5. Useful Libraries for data science
 
+--> [More](https://www.notion.so/Data-Analystic-1fd6962880de4f37bb0cbc429325dbd9)
+
 #### 1. Dev Environment Setting
 
 Using Python virtual env isolate Jupytor Notebook //
