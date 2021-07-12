@@ -28,3 +28,4 @@
 - pandas
 - time.sleep
 - calendar
+- webbrowser // webbrowser open with url
